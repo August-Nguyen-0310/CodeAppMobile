@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/bg_green_stroke"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_marginEnd="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/progressContainer"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/deepGreen"
+                />
+
+            <LinearLayout
+                android:id="@+id/llTaskCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="18dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvTaskLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Task - "
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/deepGreen"/>
+
+                <TextView
+                    android:id="@+id/tvTaskCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/deepGreen"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnViewTask"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="View Task"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="3dp"
+                    style="@android:style/Widget.Button"
+                    android:background="@drawable/bg_deep_green"
+                    android:textColor="@color/cream"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnChat"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    style="@android:style/Widget.Button"
+                    android:background="@drawable/bg_deep_green"
+                    android:textColor="@color/cream"
+                    android:text="Chat" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/progressContainer"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/cpb_project"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cpb_background_progressbar_color="@color/lightGrey"
+                app:cpb_background_progressbar_width="8dp"
+                app:cpb_progress="0"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="@color/deepGreen"
+                app:cpb_progressbar_width="10dp"
+                app:cpb_round_border="true" />
+
+            <TextView
+                android:id="@+id/tvProgressPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0%"
+                android:textColor="@color/deepGreen"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

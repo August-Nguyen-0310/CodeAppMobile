@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_green_stroke">
+
+        <EditText
+            android:id="@+id/etTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_stroke"
+            android:hint="Task Name"
+            android:textColor="@color/deepBlue"
+            android:textColorHint="@color/deepGreen"
+            android:padding="9dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etTaskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_green_stroke"
+            android:hint="Task Description..."
+            android:minLines="3"
+            android:padding="9dp"
+            android:textColor="@color/deepBlue"
+            android:textColorHint="@color/deepGreen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="top" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/deepBlue"
+            android:layout_marginVertical="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvDeadline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Set Deadline"
+                android:textColor="@color/deepGreen"
+                android:padding="9dp"
+                android:textSize="18sp"
+                android:background="@drawable/bg_green_stroke"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/ivDeleteTask"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_del"
+                app:tint="@color/deepGreen" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign Members"
+            android:textColor="@color/deepGreen"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAssignMembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

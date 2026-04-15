@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BusinessManagement" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/deepBlue</item>
+        <item name="hintTextColor">@color/white</item>
+    </style>
+
+    <style name="CircleShape">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.BusinessManagement" parent="Base.Theme.BusinessManagement" />
+</resources>

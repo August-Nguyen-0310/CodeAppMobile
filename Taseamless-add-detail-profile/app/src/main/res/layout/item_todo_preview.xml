@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="2dp"
+    >
+
+    <CheckBox
+        android:id="@+id/cbCompleted"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:buttonTint="@color/deepBlue"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:clickable="true"
+        android:focusable="false"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Todo Title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:maxLines="1"
+        android:layout_marginLeft="6dp"
+        android:ellipsize="end" />
+
+</LinearLayout>

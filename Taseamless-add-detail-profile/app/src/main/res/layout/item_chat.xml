@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_green_stroke"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Project and Task Name Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtProjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project Name"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/deepBlue" />
+
+            <TextView
+                android:id="@+id/txtChatSeparator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/deepBlue"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtYourTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Name"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/deepBlue" />
+        </LinearLayout>
+
+        <!-- Last Message Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtSenderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sender"
+                android:textStyle="bold|italic"
+                android:textSize="13sp"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/txtSenderSeparator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
+                android:textStyle="bold|italic"
+                android:textSize="13sp"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/txtMessageContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No messages yet"
+                android:textStyle="italic"
+                android:textSize="13sp"
+                android:textColor="@color/grey"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/txtMessageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:textColor="@color/grey"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Unread Indicator Dot -->
+    <View
+        android:id="@+id/viewUnreadIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_circle_active"
+        android:layout_marginStart="8dp"
+        android:visibility="gone" />
+
+</LinearLayout>

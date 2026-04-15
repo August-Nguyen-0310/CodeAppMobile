@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BusinessManagement</string>
+    <string name="tas">Tas</string>
+    <string name="eamless">eamless</string>
+    <string name="students_management_web">Students Management Web</string>
+    <string name="your_task">Your task - </string>
+    <string name="task_02">Task 02</string>
+    <string name="view_task">View Task</string>
+    <string name="chat">Chat</string>
+</resources>
